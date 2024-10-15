@@ -1,9 +1,51 @@
+/* Style de la navbar */
+.myNav {
+    /* background-color: #e9ec3f; Couleur de fond inspirée des couleurs de Pokémon */
+    /* box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); Légère ombre pour un effet de profondeur */
+}
+
+.myNav .navbar-brand {
+    font-weight: bold;
+    color: #2a75bb; /* Couleur bleue inspirée de Pokémon */
+    font-size: 1.5rem; /* Taille du texte */
+}
+
+.myNav .navbar-brand img {
+    margin-right: 10px; /* Espace entre le logo et le texte */
+}
+
+.myNav .navbar-nav .nav-link {
+    color: #2a75bb; /* Couleur des liens */
+    font-weight: bold;
+    transition: color 0.3s ease; /* Animation pour adoucir le changement de couleur */
+}
+
+.myNav .navbar-nav .nav-link:hover {
+    color: #ff5f5f; /* Couleur des liens au survol (hover) */
+}
+
+.navbar-toggler {
+    border-color: #2a75bb; /* Bordure du bouton pour mobile */
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%282, 117, 187, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    /* Change la couleur de l'icône du burger pour mobile */
+}
+
+
+
+
+
+/* create */
+
 h1 {
 
 	padding: 20px;
 	text-align: center;
-	color: #f5140c;
+	color: #2a75bb;
 	margin-bottom: 50px;
+	margin-top: 50px;
 }
 
  /* Style de base pour le formulaire */
@@ -22,9 +64,9 @@ h1 {
 label {
     font-size: 16px;
     font-weight: bold;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
     display: block;
-    color: #333;
+    color: black;
 }
 
 /* Style des champs de saisie */
@@ -51,7 +93,7 @@ textarea {
 
 /* Style du bouton */
 button[type="submit"] {
-    background-color: #4CAF50;
+    background-color: #2a75bb;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -85,4 +127,54 @@ textarea:required {
     button[type="submit"] {
         width: 100%;
     }
+}
+
+
+
+/* home.view */
+ /* Styles généraux */
+ body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+
+
+/* Style pour le conteneur principal */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Style pour les cartes Pokémon */
+.pokemon-card {
+    background-color: #eef10f;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    padding: 30px;
+    margin: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.pokemon-card h5 {
+    font-size: 20px;
+    color: #444;
+}
+
+.pokemon-card p {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Style pour la grille */
+.pokemon-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
