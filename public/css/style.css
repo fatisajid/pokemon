@@ -1,29 +1,88 @@
 h1 {
-	background-color: #e8e8f2;
+
 	padding: 20px;
 	text-align: center;
 	color: #f5140c;
-}
-.myNav {
-	background-color: #e5f021;
+	margin-bottom: 50px;
 }
 
-.myBody {
-	background-image: url("/public/img/fond.jpeg");
-	background-size: cover;
+ /* Style de base pour le formulaire */
+ form {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #e9ec3f;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
 }
-.myFooter {
-	background-color: #e5f021;
+
+/* Style des labels */
+label {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    display: block;
+    color: #333;
 }
-.bgp {
-	background-color: #7b2fd1;
+
+/* Style des champs de saisie */
+input[type="text"],
+input[type="number"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #333;
+    box-sizing: border-box;
 }
-.bgb {
-	background-color: #0e3698;
+
+/* Couleur du texte en cas d'erreur */
+.text-danger {
+    color: #d9534f;
+    font-size: 14px;
+    margin-top: -15px;
+    margin-bottom: 15px;
 }
-.bgbc {
-	background-color: #86c6f6;
+
+/* Style du bouton */
+button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
 }
-.bgg {
-	background-color: #e8e8f2;
+
+button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Style du textarea */
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+/* Style des champs obligatoires */
+input:required,
+textarea:required {
+    border-left: 4px solid #ff6b6b;
+}
+
+/* Adaptation pour les petits écrans */
+@media (max-width: 600px) {
+    form {
+        padding: 15px;
+    }
+
+    button[type="submit"] {
+        width: 100%;
+    }
 }
