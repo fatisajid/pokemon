@@ -16,6 +16,8 @@ require_once(__DIR__ . "/partials/head.php");
                 <p>Level: <?= $pokemon->getLevel() ?></p>
                 <p>Description:</p>
                 <p><?= $pokemon->getDescription() ?></p>
+                <a href="/pokemon?id=<?= $pokemon->getId() ?>" class="btn btn-primary">Détails</a>
+                <!-- <button><a href="../Views/pokemon.view.php">envoyer</a></button> -->
             </div>
         <?php
             }
