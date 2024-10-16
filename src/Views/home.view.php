@@ -18,6 +18,10 @@ require_once(__DIR__ . "/partials/head.php");
                 <p><?= $pokemon->getDescription() ?></p>
                 <a href="/pokemon?id=<?= $pokemon->getId() ?>" class="btn btn-primary">Détails</a>
                 <a href="/updatePokemon?id=<?= $pokemon->getId() ?>" class="btn btn-primary">Modifier</a>
+                <form action="/deletePokemon" method="POST">
+                        <input type="hidden" name="id" id="id" value="<?= $pokemon->getId() ?>">
+                        <button type="submit">Suprimer le Pokemon</button>
+                    </form>
                 <!-- <button><a href="../Views/pokemon.view.php">envoyer</a></button> -->
             </div>
         <?php
