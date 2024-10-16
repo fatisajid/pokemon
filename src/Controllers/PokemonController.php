@@ -56,4 +56,49 @@ class PokemonController extends AbstractController
             echo "Aucun ID de Pokémon spécifié.";
         }
     }
+
+    public function updatePokemon()
+    {
+        if ($_GET['id']) {
+            //on met l'id de pokemon dans une variable
+            $idPokemon = $_GET['id'];
+            //on instancie un nouvelle pokemon avec l'id de pokemon
+            $pokemon = new Pokemon($idPokemon, null, null, null, null);
+            //on appelle la méthode pour aller chercher le pokemon dans la BDD on met le resulat dans la variable
+            $myPokemon = $pokemon->getById();
+
+           
+
+            //Si le pokemon n'existe pas dans la base de donnée alors on redirige vers /home
+            if (!$pokemon) {
+                $this->redirectToRoute('/');
+            }
+
+            if (isset($_POST['name'])) {
+                $this->check('name', $_POST['name']);
+                $this->check('type', $_POST['type']);
+                $this->check('level', $_POST['level']);
+                $this->check('description', $_POST['description']);
+
+                if (empty($this->arrayError)) {
+                    $name = htmlspecialchars($_POST['name']);
+                    $type = htmlspecialchars($_POST['type']);
+                    $level = htmlspecialchars($_POST['level']);
+                    $description = htmlspecialchars($_POST['description']);
+                   
+
+                    $pokemon = new Pokemon($idPokemon, $name, $type, $level, $description);
+
+                    $pokemon->update();
+                    $this->redirectToRoute('/');
+                }
+            }
+
+            require_once(__DIR__ . '/../Views/pokemon/updatePokemon.view.php');
+        } else {
+            $this->redirectToRoute('/');
+        }
+    }
+
+
 }
