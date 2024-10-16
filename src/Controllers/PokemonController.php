@@ -100,5 +100,15 @@ class PokemonController extends AbstractController
         }
     }
 
+    public function deletePokemon()
+    {
+        if (isset($_POST['id'])) {
+            $idPokemon = htmlspecialchars($_POST['id']);
+            $pokemon = new Pokemon($idPokemon, null, null, null, null);
+            $pokemon->delete();
+            $this->redirectToRoute('/');
+        }
+    }
+
 
 }
